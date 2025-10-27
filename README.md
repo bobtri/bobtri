@@ -2,7 +2,7 @@
 
 🎓 **Currently a student at Medieinstitutet**  
 🔗 **Major:** Blockchain Developer  
-💡 **Interests:** Blockchain, Finance bsgdfgdfdh
+💡 **Interests:** Blockchain, Finance
 
 ---
 
