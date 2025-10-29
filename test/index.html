@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Din Portfolio – Förnamn Efternamn</title>
+  <meta name="description" content="Portfolio och online‑CV för Förnamn Efternamn: projekt, kontakt och om mig." />
+  <link rel="preload" href="assets/portrait.jpg" as="image" imagesrcset="assets/portrait.jpg 1x" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <img src="assets/portrait.jpg" alt="Porträtt på Förnamn Efternamn" width="64" height="64" loading="eager" decoding="async" />
+      <div>
+        <h1 class="site-title">Förnamn Efternamn</h1>
+        <p class="tagline">Blockchain‑utvecklarstudent • Web3 • Frontend & Node</p>
+      </div>
+    </div>
+
+    <nav class="site-nav" aria-label="Huvudmeny">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Meny</button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="#om">Om mig</a></li>
+        <li><a href="#projekt">Projekt</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="https://www.klarna.com" target="_blank" rel="noopener">Extern länk</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <main id="main" tabindex="-1">
+      <section id="om" class="card">
+        <h2>Om mig</h2>
+        <p>
+          Jag studerar till blockchain‑utvecklare (YH) och bygger lösningar i
+          JavaScript/TypeScript, React och Node. Intresserad av decentraliserad
+          infrastruktur, smarta kontrakt och tokeniserade lojalitetsprogram.
+        </p>
+        <p>
+          Här hittar du tre exempelprojekt (placeholders just nu) och hur du når mig.
+        </p>
+      </section>
+
+      <section id="projekt" class="projects">
+        <h2>Projekt</h2>
+
+        <article class="project card">
+          <header>
+            <h3>Merchant Rewards dApp (placeholder)</h3>
+          </header>
+          <p>
+            En demo‑dApp för tokeniserade kundpoäng. Frontend i React, smarta kontrakt i Solidity.
+          </p>
+          <ul class="meta">
+            <li>Roll: Frontend + kontrakt</li>
+            <li>Stack: React, Solidity, Hardhat</li>
+          </ul>
+          <a class="button" href="#" aria-disabled="true">Repo kommer snart</a>
+        </article>
+
+        <article class="project card">
+          <header>
+            <h3>Auto‑checkout bot (placeholder)</h3>
+          </header>
+          <p>
+            En proof‑of‑concept med stealth‑funktioner (random delays, UA‑spoofing) för Pop Mart.
+          </p>
+          <ul class="meta">
+            <li>Roll: Backend</li>
+            <li>Stack: Node, Puppeteer</li>
+          </ul>
+          <a class="button" href="#" aria-disabled="true">Demo kommer snart</a>
+        </article>
+
+        <article class="project card">
+          <header>
+            <h3>Litepaper: Klarna → Web3 (placeholder)</h3>
+          </header>
+          <p>
+            Ett koncept‑litepaper om Web3‑förstärkt merchant‑lösning, token‑strategi och automation.
+          </p>
+          <ul class="meta">
+            <li>Roll: Research & skriv</li>
+            <li>Innehåll: Tokenisering, smarta kontrakt, hybrid Web2/Web3</li>
+          </ul>
+          <a class="button" href="#" aria-disabled="true">PDF läggs upp här</a>
+        </article>
+      </section>
+
+      <section id="kontakt" class="card">
+        <h2>Kontakt</h2>
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="field">
+            <label for="name">Namn</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">E‑post</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="website">Webbplats</label>
+            <input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://dinsite.se" />
+          </div>
+
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+          </div>
+
+          <div class="field">
+            <label for="topic">Ärende</label>
+            <select id="topic" name="topic" required>
+              <option value="">Välj ett alternativ</option>
+              <option value="lia">LIA‑förfrågan</option>
+              <option value="projekt">Projektidé</option>
+              <option value="annat">Annat</option>
+            </select>
+          </div>
+
+          <div class="field checkbox">
+            <input id="consent" name="consent" type="checkbox" required />
+            <label for="consent">Jag godkänner att mina uppgifter hanteras för återkoppling.</label>
+          </div>
+
+          <div class="field">
+            <label for="message">Meddelande</label>
+            <textarea id="message" name="message" rows="6" placeholder="Berätta kort vad du vill ha hjälp med…"></textarea>
+          </div>
+
+          <button class="button primary" type="submit">Skicka</button>
+        </form>
+
+        <div class="contact-details" aria-labelledby="contact-heading">
+          <h3 id="contact-heading">Kontaktuppgifter</h3>
+          <ul>
+            <li>E‑post: <a href="mailto:fornamn.efternamn@example.com">fornamn.efternamn@example.com</a></li>
+            <li>Telefon: <a href="tel:+46700000000">+46 70 000 00 00</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/ditt‑namn" target="_blank" rel="noopener">linkedin.com/in/ditt‑namn</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <aside class="site-aside" aria-label="Sidoinformation">
+      <section class="card">
+        <h2>Just nu</h2>
+        <p>Läser kurser i blockkedjeteknik, affärsprocesser & juridik, HTML/CSS, React & Node.</p>
+      </section>
+      <section class="card">
+        <h2>Att lägga till</h2>
+        <ul>
+          <li>Skolprojekt (kommande)</li>
+          <li>Github‑länkar</li>
+          <li>Presentationer & litepapers</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Förnamn Efternamn. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Tillgänglig meny-knapp för mobil
+    const toggle = document.querySelector('.nav-toggle');
+    const list = document.getElementById('nav-list');
+    toggle?.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      list.classList.toggle('open');
+    });
+
+    // År i sidfot
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
