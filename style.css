@@ -116,7 +116,7 @@ header nav ul li.active {
 
 header nav ul li:not(.active):hover {
   border-radius: 0;
-  background-color: aquamarine;
+  background-color: rgb(144, 127, 255);
   color: black;
 }
 
