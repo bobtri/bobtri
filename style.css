@@ -147,32 +147,52 @@ body{
 }
 .tagline{ color: var(--muted); max-width: 56ch; }
 
-.cta-row{ display:flex; gap:12px; margin-top:18px; }
-
-.btn{
-  display:inline-block; text-decoration:none;
-  border:1px solid #2a2b46; border-radius:10px;
-  padding:10px 14px; font-weight:700;
+.button-row { 
+  display: flex; 
+  gap: 12px; 
+  margin-top: 18px;
 }
-.btn-primary{
-  color:#0a0b13; background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
-  border: none; box-shadow: var(--glow);
-}
-.btn-ghost{ color: var(--text); background: #181a31; }
-.btn:hover{ transform: translateY(-1px); transition: .15s; }
 
-.hero-image-wrap{ position: relative; max-width: 360px; justify-self: end; }
-@media (max-width: 900px){ .hero-image-wrap{ justify-self: start; } }
-.hero-image{
-  border-radius: 14px; border: 1px solid #2a2b46;
+.btn {
+  display: inline-block; 
+  text-decoration: none;
+  border: 1px solid #2a2b46; 
+  border-radius: 10px;
+  padding: 10px 16px; 
+  font-weight: 700;
+  color: var(--text); 
+  background: #181a31; /* for all buttons */
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+  box-shadow: var(--glow);
+  transform: translateY(-1px);
+  color: #0a0b13; /* make text darker for contrast */
+}
+
+.hero-image-wrap { 
+  position: relative; 
+  max-width: 250px; 
+  justify-self: end;
+}
+
+@media (max-width: 900px) { 
+  .hero-image-wrap {justify-self: start;} 
+}
+
+.hero-image {
+  border-radius: 50%; 
+  border: 3px solid rgba(255,60,172,.6);
   box-shadow: 0 10px 40px rgba(0,0,0,.45);
 }
-.neon-frame{
-  position:absolute; inset:-10px;
-  border-radius: 16px;
-  background:
-    linear-gradient(45deg, rgba(255,60,172,.35), rgba(43,210,255,.35));
-  filter: blur(16px); z-index:-1;
+.neon-frame {
+  position: absolute; 
+  inset: -20px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255,60,172,.35), rgba(43,210,255,.35));
+  filter: blur(16px); 
+  z-index: -1;
 }
 
 /* 80s grid floor */
@@ -276,13 +296,19 @@ body{
 
 /* Footer */
 .site-footer{
-  border-top:1px solid #1c1d32;
-  background: #0a0b13; padding: 18px 0;
+  border-top: 1px solid #1c1d32;
+  background: #0a0b13; 
+  padding: 180px 0;
 }
-.footer-inner{
-  display:flex; align-items:center; justify-content:space-between; gap:16px;
+
+.footer-inner {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 16px;
 }
-.footer-inner a{ color: var(--muted); text-decoration:none; }
+
+.footer-inner a { color: var(--muted); text-decoration:none; }
 .footer-inner a:hover{ color: var(--text); text-shadow: var(--glow); }
 @media (max-width: 700px){
   .footer-inner{ flex-direction: column; text-align:center; }

@@ -7,7 +7,7 @@
 
   <!-- 80s fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
-
+  
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -42,14 +42,14 @@
         <p class="role">BLOCKCHAIN DEVELEOPER STUDENT • FALKENBERG/SWEDEN</p>
         <p class="tagline">In early stage on becoming a blockchain developer and learning to code at the moment.</p>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#projects">SEE PROJECTS</a>
-          <a class="btn btn-ghost" href="#contact">CONTACT ME</a>
+        <div class="button-row">
+          <a class="btn" href="#projects">SEE PROJECTS</a>
+          <a class="btn" href="#skills">SKILLS</a>
+          <a class="btn" href="#contact">CONTACT ME</a>
         </div>
       </div>
 
       <div class="hero-image-wrap">
-        <!-- Replace with your image -->
         <img src="image/487418343_10163504157718357_3943590399379987614_n.jpg" alt="Portrait of a man in suit" class="hero-image" />
         <div class="neon-frame" aria-hidden="true"></div>
       </div>
@@ -192,15 +192,15 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> YOUR_NAME — All synths reserved.</p>
+      <p>© 2025 Bobby Trinh — All rights reserved.</p>
       <div class="socials">
-        <a href="https://github.com/YOUR_HANDLE" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/bobtri" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/YOUR_HANDLE" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#">Twitter/X</a>
       </div>
     </div>
   </footer>
 
+<!-- 
   <script>
     // current year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -213,6 +213,15 @@
       btn.setAttribute('aria-expanded', !expanded);
       menu.classList.toggle('open');
     });
-  </script>
+
+    // --- always start at top on refresh ---
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        window.location.hash = '';
+        window.scrollTo(0, 0);
+      }
+    });
+  </script> 
+  -->
 </body>
 </html>
