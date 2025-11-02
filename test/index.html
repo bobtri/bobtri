@@ -1,185 +1,217 @@
-<!doctype html>
-<html lang="sv">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Din Portfolio – Förnamn Efternamn</title>
-  <meta name="description" content="Portfolio och online‑CV för Förnamn Efternamn: projekt, kontakt och om mig." />
-  <link rel="preload" href="assets/portrait.jpg" as="image" imagesrcset="assets/portrait.jpg 1x" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>YOUR_NAME • Portfolio</title>
+
+  <!-- 80s fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+  <!-- Scanline overlay (visual only) -->
+  <div class="scanlines" aria-hidden="true"></div>
 
-  <header class="site-header" role="banner">
-    <div class="brand">
-      <img src="assets/portrait.jpg" alt="Porträtt på Förnamn Efternamn" width="64" height="64" loading="eager" decoding="async" />
-      <div>
-        <h1 class="site-title">Förnamn Efternamn</h1>
-        <p class="tagline">Blockchain‑utvecklarstudent • Web3 • Frontend & Node</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Go to top">
+        <span>YOUR</span><span class="neon-spark">_</span><span>NAME</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 class="glow-title">YOUR_NAME</h1>
+        <p class="role">YOUR_ROLE • CITY/COUNTRY</p>
+        <p class="tagline">SHORT ONE-LINER ABOUT YOU (e.g. “Building Web3 apps with pixel-perfect UX.”)</p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">SEE PROJECTS</a>
+          <a class="btn btn-ghost" href="#contact">CONTACT ME</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <!-- Replace with your image -->
+        <img src="images/your-portrait.jpg" alt="Portrait of YOUR_NAME" class="hero-image" />
+        <div class="neon-frame" aria-hidden="true"></div>
       </div>
     </div>
 
-    <nav class="site-nav" aria-label="Huvudmeny">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Meny</button>
-      <ul id="nav-list" class="nav-list">
-        <li><a href="#om">Om mig</a></li>
-        <li><a href="#projekt">Projekt</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-        <li><a href="https://www.klarna.com" target="_blank" rel="noopener">Extern länk</a></li>
+    <!-- Retro grid floor -->
+    <div class="grid-floor" aria-hidden="true"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container two-col">
+      <div>
+        <h2 class="section-title">ABOUT</h2>
+        <p class="lead">
+          WRITE A SHORT BIO HERE. Mention your focus (e.g., blockchain, frontend, UX), your values, and what problems you love to solve.
+        </p>
+        <p>
+          Add a few highlights: years of experience, notable projects/clients, or passions. Keep it tight and readable.
+        </p>
+        <a class="btn btn-ghost" href="files/YOUR_CV.pdf" target="_blank" rel="noopener">DOWNLOAD CV</a>
+      </div>
+      <ul class="about-cards">
+        <li>
+          <h3>WHAT I DO</h3>
+          <p>Put 2–3 lines on your specialties (e.g., smart contracts, modern UI, performance).</p>
+        </li>
+        <li>
+          <h3>VALUES</h3>
+          <p>e.g., clarity, speed, security, and collaboration.</p>
+        </li>
+        <li>
+          <h3>AVAILABLE FOR</h3>
+          <p>Freelance, Part-time, Full-time — your choice.</p>
+        </li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </section>
 
-  <div class="layout">
-    <main id="main" tabindex="-1">
-      <section id="om" class="card">
-        <h2>Om mig</h2>
-        <p>
-          Jag studerar till blockchain‑utvecklare (YH) och bygger lösningar i
-          JavaScript/TypeScript, React och Node. Intresserad av decentraliserad
-          infrastruktur, smarta kontrakt och tokeniserade lojalitetsprogram.
-        </p>
-        <p>
-          Här hittar du tre exempelprojekt (placeholders just nu) och hur du når mig.
-        </p>
-      </section>
+  <!-- Projects -->
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2 class="section-title">PROJECTS</h2>
 
-      <section id="projekt" class="projects">
-        <h2>Projekt</h2>
-
-        <article class="project card">
-          <header>
-            <h3>Merchant Rewards dApp (placeholder)</h3>
-          </header>
-          <p>
-            En demo‑dApp för tokeniserade kundpoäng. Frontend i React, smarta kontrakt i Solidity.
-          </p>
-          <ul class="meta">
-            <li>Roll: Frontend + kontrakt</li>
-            <li>Stack: React, Solidity, Hardhat</li>
-          </ul>
-          <a class="button" href="#" aria-disabled="true">Repo kommer snart</a>
+      <div class="projects-grid">
+        <!-- Project card 1 -->
+        <article class="card">
+          <img src="images/project-1.jpg" alt="Screenshot of PROJECT_NAME_1" />
+          <div class="card-body">
+            <h3>PROJECT_NAME_1</h3>
+            <p>1–2 lines describing what it does, your role, and the tech stack.</p>
+            <div class="chips">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-ghost" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
+              <a class="btn btn-ghost" href="https://github.com/YOUR_HANDLE/REPO_1" target="_blank" rel="noopener">CODE</a>
+            </div>
+          </div>
         </article>
 
-        <article class="project card">
-          <header>
-            <h3>Auto‑checkout bot (placeholder)</h3>
-          </header>
-          <p>
-            En proof‑of‑concept med stealth‑funktioner (random delays, UA‑spoofing) för Pop Mart.
-          </p>
-          <ul class="meta">
-            <li>Roll: Backend</li>
-            <li>Stack: Node, Puppeteer</li>
-          </ul>
-          <a class="button" href="#" aria-disabled="true">Demo kommer snart</a>
+        <!-- Project card 2 -->
+        <article class="card">
+          <img src="images/project-2.jpg" alt="Screenshot of PROJECT_NAME_2" />
+          <div class="card-body">
+            <h3>PROJECT_NAME_2</h3>
+            <p>Short description — problem solved, your contribution, results.</p>
+            <div class="chips">
+              <span class="chip">React</span><span class="chip">Node</span><span class="chip">API</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-ghost" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
+              <a class="btn btn-ghost" href="https://github.com/YOUR_HANDLE/REPO_2" target="_blank" rel="noopener">CODE</a>
+            </div>
+          </div>
         </article>
 
-        <article class="project card">
-          <header>
-            <h3>Litepaper: Klarna → Web3 (placeholder)</h3>
-          </header>
-          <p>
-            Ett koncept‑litepaper om Web3‑förstärkt merchant‑lösning, token‑strategi och automation.
-          </p>
-          <ul class="meta">
-            <li>Roll: Research & skriv</li>
-            <li>Innehåll: Tokenisering, smarta kontrakt, hybrid Web2/Web3</li>
-          </ul>
-          <a class="button" href="#" aria-disabled="true">PDF läggs upp här</a>
+        <!-- Project card 3 -->
+        <article class="card">
+          <img src="images/project-3.jpg" alt="Screenshot of PROJECT_NAME_3" />
+          <div class="card-body">
+            <h3>PROJECT_NAME_3</h3>
+            <p>Another short description with impact or metrics if possible.</p>
+            <div class="chips">
+              <span class="chip">Solidity</span><span class="chip">Ethers</span><span class="chip">Hardhat</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-ghost" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
+              <a class="btn btn-ghost" href="https://github.com/YOUR_HANDLE/REPO_3" target="_blank" rel="noopener">CODE</a>
+            </div>
+          </div>
         </article>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section id="kontakt" class="card">
-        <h2>Kontakt</h2>
-        <form class="contact-form" action="#" method="post" novalidate>
-          <div class="field">
-            <label for="name">Namn</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">SKILLS</h2>
+      <ul class="skill-list">
+        <li class="skill">HTML5</li>
+        <li class="skill">CSS3 / Sass</li>
+        <li class="skill">JavaScript</li>
+        <li class="skill">React</li>
+        <li class="skill">Node.js</li>
+        <li class="skill">Solidity</li>
+        <li class="skill">Ethers.js</li>
+        <li class="skill">Hardhat</li>
+        <li class="skill">Git / GitHub</li>
+      </ul>
+    </div>
+  </section>
 
-          <div class="field">
-            <label for="email">E‑post</label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
-          </div>
-
-          <div class="field">
-            <label for="website">Webbplats</label>
-            <input id="website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="https://dinsite.se" />
-          </div>
-
-          <div class="field">
-            <label for="phone">Telefon</label>
-            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
-          </div>
-
-          <div class="field">
-            <label for="topic">Ärende</label>
-            <select id="topic" name="topic" required>
-              <option value="">Välj ett alternativ</option>
-              <option value="lia">LIA‑förfrågan</option>
-              <option value="projekt">Projektidé</option>
-              <option value="annat">Annat</option>
-            </select>
-          </div>
-
-          <div class="field checkbox">
-            <input id="consent" name="consent" type="checkbox" required />
-            <label for="consent">Jag godkänner att mina uppgifter hanteras för återkoppling.</label>
-          </div>
-
-          <div class="field">
-            <label for="message">Meddelande</label>
-            <textarea id="message" name="message" rows="6" placeholder="Berätta kort vad du vill ha hjälp med…"></textarea>
-          </div>
-
-          <button class="button primary" type="submit">Skicka</button>
-        </form>
-
-        <div class="contact-details" aria-labelledby="contact-heading">
-          <h3 id="contact-heading">Kontaktuppgifter</h3>
-          <ul>
-            <li>E‑post: <a href="mailto:fornamn.efternamn@example.com">fornamn.efternamn@example.com</a></li>
-            <li>Telefon: <a href="tel:+46700000000">+46 70 000 00 00</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/ditt‑namn" target="_blank" rel="noopener">linkedin.com/in/ditt‑namn</a></li>
-          </ul>
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="container narrow">
+      <h2 class="section-title">CONTACT</h2>
+      <form class="contact-form" action="#" method="post">
+        <div class="grid">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
         </div>
-      </section>
-    </main>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+        </label>
 
-    <aside class="site-aside" aria-label="Sidoinformation">
-      <section class="card">
-        <h2>Just nu</h2>
-        <p>Läser kurser i blockkedjeteknik, affärsprocesser & juridik, HTML/CSS, React & Node.</p>
-      </section>
-      <section class="card">
-        <h2>Att lägga till</h2>
-        <ul>
-          <li>Skolprojekt (kommande)</li>
-          <li>Github‑länkar</li>
-          <li>Presentationer & litepapers</li>
-        </ul>
-      </section>
-    </aside>
-  </div>
+        <button class="btn btn-primary" type="submit">SEND</button>
+      </form>
+      <p class="contact-note">Prefer email? <a href="mailto:you@domain.com">you@domain.com</a></p>
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Förnamn Efternamn. All rights reserved.</p>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> YOUR_NAME — All synths reserved.</p>
+      <div class="socials">
+        <a href="https://github.com/YOUR_HANDLE" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR_HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#">Twitter/X</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    // Tillgänglig meny-knapp för mobil
-    const toggle = document.querySelector('.nav-toggle');
-    const list = document.getElementById('nav-list');
-    toggle?.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      list.classList.toggle('open');
-    });
-
-    // År i sidfot
+    // current year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    const btn = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('#nav-menu');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    });
   </script>
 </body>
 </html>
