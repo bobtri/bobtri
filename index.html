@@ -42,7 +42,7 @@
         <p class="role">BLOCKCHAIN DEVELEOPER STUDENT • FALKENBERG/SWEDEN</p>
         <p class="tagline">In early stage on becoming a blockchain developer and learning to code at the moment.</p>
 
-        <div class="button-row">
+        <div class="cta-row">
           <a class="btn" href="#projects">SEE PROJECTS</a>
           <a class="btn" href="#skills">SKILLS</a>
           <a class="btn" href="#contact">CONTACT ME</a>
@@ -200,10 +200,10 @@
     </div>
   </footer>
 
-<!-- 
   <script>
-    // current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // set year only if the element exists
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // mobile nav toggle
     const btn = document.querySelector('.nav-toggle');
@@ -214,14 +214,13 @@
       menu.classList.toggle('open');
     });
 
-    // --- always start at top on refresh ---
+    // reload-at-top helper (optional)
     window.addEventListener('load', () => {
-      if (window.location.hash) {
-        window.location.hash = '';
-        window.scrollTo(0, 0);
+      if (location.hash) {
+        location.hash = '';
+        scrollTo(0, 0);
       }
     });
-  </script> 
-  -->
+  </script>
 </body>
 </html>
