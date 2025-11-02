@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BOBBY TRINH • Portfolio</title>
 
+  <!-- Icon font (for symbols like “home” or “mail”) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
   <!-- 80s fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   
@@ -50,7 +53,7 @@
       </div>
 
       <div class="hero-image-wrap">
-        <img src="image/487418343_10163504157718357_3943590399379987614_n.jpg" alt="Portrait of a man in suit" class="hero-image" />
+        <img src="image/487418343_10163504157718357_3943590399379987614_n.jpg" alt="Portrait of A man in a suit" class="hero-image" />
         <div class="neon-frame" aria-hidden="true"></div>
       </div>
     </div>
@@ -64,14 +67,15 @@
     <div class="container two-col">
       <div>
         <h2 class="section-title">ABOUT</h2>
-        <p class="lead">
-          WRITE A SHORT BIO HERE. Mention your focus (e.g., blockchain, frontend, UX), your values, and what problems you love to solve.
-        </p>
-        <p>
-          Add a few highlights: years of experience, notable projects/clients, or passions. Keep it tight and readable.
-        </p>
-        <a class="btn" href="files/YOUR_CV.pdf" target="_blank" rel="noopener">DOWNLOAD CV</a>
+        <p class="lead">WRITE A SHORT BIO HERE. Mention your focus (e.g., blockchain, frontend, UX), your values, and what problems you love to solve.</p>
+        <p>Add a few highlights: years of experience, notable projects/clients, or passions. Keep it tight and readable.</p>
+        
+        <div class="cta-row">
+          <a class="btn" href="files/YOUR_CV.pdf" target="_blank" rel="noopener">DOWNLOAD CV</a>
+          <a class="btn" href="files/YOUR_Cover-letter.pdf" target="_blank" rel="noopener">DOWNLOAD COVER LETTER</a>
+        </div>
       </div>
+
       <ul class="about-cards">
         <li>
           <h3>WHAT I DO</h3>
@@ -97,48 +101,52 @@
       <div class="projects-grid">
         <!-- Project card 1 -->
         <article class="card">
-          <img src="images/project-1.jpg" alt="Screenshot of PROJECT_NAME_1" />
+          <img src="image/crypto-universe-blockchain-ecosystem-luminescent-bitcoin-symbol-dominates-decentralized-network-landscape-surrounded-myriad-312183190.jpg.webp" alt="Screenshot of Blockchain" />
           <div class="card-body">
-            <h3>PROJECT_NAME_1</h3>
+            <h3>BLOCKCHAIN</h3>
             <p>Short description of the project.</p>
+            
             <div class="chips">
-              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span>
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
             </div>
+            
             <div class="card-actions">
-              <a class="btn btn-ghost" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
-              <a class="btn btn-ghost" href="https://github.com/YOUR_HANDLE/REPO_1" target="_blank" rel="noopener">CODE</a>
+              <a class="btn" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
+              <a class="btn" href="https://github.com/YOUR_HANDLE/REPO_1" target="_blank" rel="noopener">CODE</a>
             </div>
           </div>
         </article>
 
         <!-- Project card 2 -->
         <article class="card">
-          <img src="images/project-2.jpg" alt="Screenshot of PROJECT_NAME_2" />
+          <img src="image/backend-front-end.png.webp" alt="Screenshot of Frontend and backend" />
           <div class="card-body">
-            <h3>PROJECT_NAME_2</h3>
+            <h3>FRONT- / BACKEND</h3>
             <p>Short description of the project.</p>
+            
             <div class="chips">
-              <span class="chip">React</span><span class="chip">Node</span><span class="chip">API</span>
+              <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">API</span>
             </div>
+            
             <div class="card-actions">
-              <a class="btn btn-ghost" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
-              <a class="btn btn-ghost" href="https://github.com/YOUR_HANDLE/REPO_2" target="_blank" rel="noopener">CODE</a>
+              <a class="btn" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
+              <a class="btn" href="https://github.com/YOUR_HANDLE/REPO_2" target="_blank" rel="noopener">CODE</a>
             </div>
           </div>
         </article>
 
         <!-- Project card 3 -->
         <article class="card">
-          <img src="images/project-3.jpg" alt="Screenshot of PROJECT_NAME_3" />
+          <img src="image/blog-cover57-1.jpg" alt="Screenshot of Smart Contracts" />
           <div class="card-body">
-            <h3>PROJECT_NAME_3</h3>
+            <h3>SMART CONTRACTS</h3>
             <p>Short description of the project.</p>
             <div class="chips">
-              <span class="chip">Solidity</span><span class="chip">Ethers</span><span class="chip">Hardhat</span>
+              <span class="chip">Solidity</span><span class="chip">Ethers</span><span class="chip">Rust</span>
             </div>
             <div class="card-actions">
-              <a class="btn btn-ghost" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
-              <a class="btn btn-ghost" href="https://github.com/YOUR_HANDLE/REPO_3" target="_blank" rel="noopener">CODE</a>
+              <a class="btn" href="https://example.com" target="_blank" rel="noopener">LIVE</a>
+              <a class="btn" href="https://github.com/YOUR_HANDLE/REPO_3" target="_blank" rel="noopener">CODE</a>
             </div>
           </div>
         </article>
@@ -152,13 +160,13 @@
       <h2 class="section-title">SKILLS</h2>
       <ul class="skill-list">
         <li class="skill">HTML5</li>
-        <li class="skill">CSS3 / Sass</li>
+        <li class="skill">CSS3</li>
         <li class="skill">JavaScript</li>
         <li class="skill">React</li>
         <li class="skill">Node.js</li>
         <li class="skill">Solidity</li>
         <li class="skill">Ethers.js</li>
-        <li class="skill">Hardhat</li>
+        <li class="skill">Rust</li>
         <li class="skill">Git / GitHub</li>
       </ul>
     </div>
@@ -184,9 +192,9 @@
           <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
         </label>
 
-        <button class="btn btn-primary" type="submit">SEND</button>
+        <button class="btn" type="submit">SEND</button>
       </form>
-      <p class="contact-note">Prefer email? <a href="mailto:you@domain.com">you@domain.com</a></p>
+      <p class="contact-note">Prefer email? <a href="mailto:bobtri15@gmail.com">bobtri15@gmail.com</a></p>
     </div>
   </section>
 
