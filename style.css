@@ -123,7 +123,7 @@ body {
 /* Mobile nav */
 @media (max-width: 800px) {
   .nav-toggle { 
-    display: inline-block; 
+    display: inline-block;
   }
 
   .nav-menu {
@@ -136,11 +136,20 @@ body {
     padding: 12px;
     display: none;
     flex-direction: column; 
-    gap: 10px;
+    gap: 10px;  
   }
 
   .nav-menu.open { 
     display: flex; 
+  }
+
+  .nav-menu a {
+    padding: 8px 10px;          /* add */
+    border-radius: 8px;          /* optional */
+  }
+
+  .nav-menu a:hover { 
+    background: #ff3caad9; 
   }
 }
 
