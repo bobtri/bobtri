@@ -217,13 +217,13 @@
     // mobile nav toggle (guarded + string attr)
     const btn = document.querySelector('.nav-toggle');
     const menu = document.querySelector('#nav-menu');
-    if (btn && menu) {
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        menu.classList.toggle('open');
-      });
-    }
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          menu.classList.toggle('open');
+        });
+      }
 
     // reload-at-top helper (optional)
     window.addEventListener('load', () => {
