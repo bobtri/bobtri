@@ -299,7 +299,7 @@ body {
 
 .about-cards li {
   background: #151633; 
-  order: 1px solid #2a2b46; 
+  border: 1px solid #2a2b46; 
   border-radius: 12px;
   padding: 16px;
 }
