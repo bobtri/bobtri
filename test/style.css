@@ -1,0 +1,175 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+}
+
+body {
+  background-color: black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.currencies article {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.portfolio-and-chart .portfolio {
+  background-color: rgb(162, 162, 21);
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------- */
+.currencies .logo {
+  background-color: gray;
+  padding: 4px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.currencies .logo span {
+  transform: translate(50%, 50%);
+}
+
+.currencies .top .left .symbol {
+  display: flex;
+  gap: 8px;
+}
+
+.currencies .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currencies .top .arrow {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  /* Bästa tricket! */
+  position: relative;
+}
+
+.currencies .top .arrow span {
+  /* För att centrera, flytta "ikonen" från sin ordinarie plats s
+  å att den hamnar i mitten (och sätt position: relative; på parent-elementet): */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+
+  font-size: 1rem;
+}
+
+.currencies .bottom {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+/* ---------------------------------- */
+
+/* ----------------- NAV ----------------- */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+header nav ul li {
+  display: grid;
+  grid-template-columns: 40px auto;
+  gap: 4px;
+  margin-bottom: 16px;
+  align-items: center;
+  padding: 4px;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+header nav ul li.active {
+  background-color: grey;
+  border-radius: 8px;
+}
+
+header nav ul li:not(.active):hover {
+  border-radius: 0;
+  background-color: aquamarine;
+  color: black;
+}
+
+header nav ul li .material-symbols-outlined {
+  font-size: 2rem;
+}
+
+header nav {
+  color: white;
+}
+
+header {
+  padding: 24px;
+}
+/* ----------------- /NAV ----------------- */
+
+@media screen and (min-width: 960px) {
+  main {
+    display: grid;
+    grid-template-columns: 300px auto;
+  }
+
+  .balance {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .balance .development {
+    text-align: right;
+  }
+
+  .currencies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+
+    margin-block: 24px;
+  }
+
+  .portfolio-and-chart {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 8px;
+  }
+
+  header {
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+  }
+
+  header .logo {
+    color: rgb(210, 26, 164);
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
