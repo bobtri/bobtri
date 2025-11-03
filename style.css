@@ -1,3 +1,11 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 /* =========================
    80s Synthwave Theme
    ========================= */
@@ -457,11 +465,17 @@ body {
   align-items: center; 
   justify-content: space-between; 
   gap: 16px;
+  color: var(--muted); 
 }
 
 .footer-inner a { 
   color: var(--muted); 
-  text-decoration: none; 
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
 }
 
 .footer-inner a:hover { 
