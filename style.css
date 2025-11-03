@@ -448,8 +448,9 @@ body {
 .material-symbols-outlined {
   display: inline-flex;
   vertical-align: middle;
-  margin-left: 6px;
+  margin: 0 4px;
   color: var(--muted);
+  font-size: 1.1em;
 }
 
 /* Footer */

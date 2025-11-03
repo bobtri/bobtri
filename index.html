@@ -26,7 +26,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
         <ul id="nav-menu" class="nav-menu">
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#projects">PROJECTS</a></li>
@@ -42,7 +42,7 @@
     <div class="container hero-inner">
       <div class="hero-text">
         <h1 class="glow-title">BOBBY TRINH</h1>
-        <p class="role">BLOCKCHAIN DEVELEOPER STUDENT • FALKENBERG/SWEDEN</p>
+        <p class="role">BLOCKCHAIN DEVELOPER STUDENT • FALKENBERG/SWEDEN</p>
         <p class="tagline">In early stage on becoming a blockchain developer and learning to code at the moment.</p>
 
         <div class="cta-row">
@@ -101,7 +101,7 @@
       <div class="projects-grid">
         <!-- Project card 1 -->
         <article class="card">
-          <img src="image/crypto-universe-blockchain-ecosystem-luminescent-bitcoin-symbol-dominates-decentralized-network-landscape-surrounded-myriad-312183190.jpg.webp" alt="Screenshot of Blockchain">
+          <img src="image/crypto-universe-blockchain-ecosystem-luminescent-bitcoin-symbol-dominates-decentralized-network-landscape-surrounded-myriad-312183190.jpg.webp" alt="Crypto dashboard UI with network graph">
           <div class="card-body">
             <h3>BLOCKCHAIN</h3>
             <p>Short description of the project.</p>
@@ -214,23 +214,25 @@
   </footer>
 
   <script>
-    // set year only if the element exists
+    // year (only if you actually add <span id="year">…</span> somewhere)
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // mobile nav toggle
+    // mobile nav toggle (guarded + string attr)
     const btn = document.querySelector('.nav-toggle');
     const menu = document.querySelector('#nav-menu');
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      menu.classList.toggle('open');
-    });
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
+    }
 
     // reload-at-top helper (optional)
     window.addEventListener('load', () => {
       if (location.hash) {
-        location.hash = '';
+        history.replaceState(null, '', location.pathname + location.search);
         scrollTo(0, 0);
       }
     });
