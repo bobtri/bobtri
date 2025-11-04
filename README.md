@@ -8,7 +8,7 @@
 
 ## 🚀 About Me
 
-I'm passionate about the future of decentralized technologies and finance. As a student at Medieinstitutet, I'm on a journey to become a skilled blockchain developer. Although my skills are still in progress, I'm eager to learn, collaborate, and contribute to exciting projects in the blockchain and fintech space.
+I'm passionate about the future of decentralized technologies and finance. As a student at Medieinstitutet, I'm on a journey to become a skilled blockchain developer. Although my skills are still in progress, I'm eager to learn, collaborate and contribute to exciting projects in the blockchain and fintech space.
 
 ---
 
