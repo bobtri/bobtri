@@ -251,7 +251,7 @@
   </main>
 
   <script>
-    // mobile nav toggle (guarded + string attr)
+    // mobile nav toggle
     const btn = document.querySelector('.nav-toggle');
     const menu = document.querySelector('#nav-menu');
       if (btn && menu) {
@@ -261,14 +261,6 @@
           menu.classList.toggle('open');
         });
       }
-
-    // reload-at-top helper (optional)
-    window.addEventListener('load', () => {
-      if (location.hash) {
-        history.replaceState(null, '', location.pathname + location.search);
-        scrollTo(0, 0);
-      }
-    });
   </script>
 </body>
 </html>
