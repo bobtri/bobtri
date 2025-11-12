@@ -1,0 +1,379 @@
+/* ------------------------------
+Dashboard CSS-variables
+------------------------------ */
+:root {
+    --bg: rgb(247, 247, 249);
+    --surface: rgb(255, 255, 255);
+    --text: rgb(19, 20, 26);
+    --muted: rgb(91, 97, 112);
+    --primary: rgb(91, 141, 239);      /* accent */
+    --primary-contrast: rgb(255, 255, 255);
+    --success: rgb(25, 183, 127);
+    --warning: rgb(245, 165, 36);
+    --danger: rgb(225, 77, 77);
+    --border: rgb(229, 231, 235);
+    --ring: rgb(122, 162, 255);         /* focus ring */
+    --shadow: 0 10px 30px rgba(0,0,0,.06);
+    --radius: 18px;
+    --radius-sm: 12px;
+    --container: min(1400px, 95vw); /* works on 2560px+ */
+}
+
+/* Light theme when box unchecked */
+html:not(:has(#theme-toggle:checked)) {
+    --bg: rgb(247, 247, 249);
+    --surface: rgb(255, 255, 255);
+    --text: rgb(19, 20, 26);
+    --muted: rgb(91, 97, 112);
+    --primary: rgb(91, 141, 239);
+    --primary-contrast: rgb(255, 255, 255);
+    --success: rgb(25, 183, 127);
+    --warning: rgb(245, 165, 36);
+    --danger: rgb(225, 77, 77);
+    --border: rgb(229, 231, 235);
+    --ring: rgb(122, 162, 255);
+    --shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+/* Dark theme when box checked */
+html:has(#theme-toggle:checked) {
+    --bg: rgb(15, 17, 22);
+    --surface: rgb(22, 25, 35);
+    --text: rgb(243, 244, 246);
+    --muted: rgb(165, 173, 187);
+    --primary: rgb(122, 162, 255);
+    --primary-contrast: rgb(15, 17, 22);
+    --success: rgb(43, 210, 154);
+    --warning: rgb(255, 184, 92);
+    --danger: rgb(255, 107, 107);
+    --border: rgb(34, 38, 54);
+    --ring: rgb(160, 185, 255);
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ------------------------------
+Base-styles & typography
+------------------------------ */
+html { 
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Noto Sans", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(91,141,239,.15), transparent 60%),
+        radial-gradient(1200px 800px at 100% 0%, rgba(43,210,154,.07), transparent 60%),
+        var(--bg);
+    line-height: 1.5;
+    font-size: clamp(15px, 1.2vw, 18px); /* scaling up on big screens */
+}
+
+.container { 
+    width: var(--container); 
+    margin-inline: auto;
+}
+
+/* ------------------------------
+Header / Navigation
+------------------------------ */
+header {
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
+    backdrop-filter: saturate(1.2) blur(8px);
+    background: color-mix(in oklab, var(--bg) 75%, transparent);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    display: flex; 
+    align-items: center;
+    padding: 14px 10px; 
+}
+
+.brand { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-right: auto; 
+    text-decoration: none; 
+}
+
+.logo {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 12px;
+    background: linear-gradient(150deg, var(--primary), color-mix(in oklab, var(--primary), rgb(43, 210, 154) 45%));
+    box-shadow: 
+        inset 0 0 0 3px color-mix(in oklab, var(--primary-contrast), transparent 85%), 
+        var(--shadow);
+    display: grid; 
+    place-items: center; 
+    color: var(--primary-contrast); 
+    font-weight: 800;
+}
+
+.brand span { 
+    font-weight: 700; 
+    letter-spacing: .2px; 
+}
+
+.nav a {
+    text-decoration: none; 
+    color: var(--muted); 
+    font-weight: 600;
+    padding: 10px 14px; 
+    border-radius: 10px;
+}
+
+.nav a:hover { 
+    color: var(--text); 
+    background: color-mix(in oklab, var(--surface), transparent 70%); 
+}
+
+.nav a:focus-visible { 
+    outline: 3px solid var(--ring); 
+    outline-offset: 2px; 
+}
+
+/* ------------------------------
+Intro
+------------------------------ */
+.hero { 
+    padding: clamp(28px, 3.2vw, 48px) 0 10px; 
+}
+
+.hero h1 { 
+    font-size: clamp(24px, 3.2vw, 38px); 
+    margin: 0 0 6px; 
+}
+
+.hero p { 
+    margin: 0; 
+    color: var(--muted); 
+}
+
+/* ------------------------------
+Section layouts
+------------------------------ */
+section { 
+    padding: 24px 0 40px; 
+}
+
+.cards {
+    display: grid; gap: 12px;
+    grid-template-columns: 1fr; /* mobile */
+}
+
+@media (min-width: 720px) { 
+    .cards { 
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+
+@media (min-width: 1100px) { 
+    .cards { 
+        grid-template-columns: 2fr 1fr; 
+    } 
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(14px, 1.6vw, 22px);
+}
+
+.card h3 { 
+    margin-top: 0; 
+    margin-bottom: 12px; 
+    font-size: 1.1em; 
+}
+
+/* Wallet balance */
+.balance {
+    display: grid; 
+    gap: 14px;
+    grid-template-columns: 56px 1fr; 
+    align-items: center;
+}
+
+.token {
+    width: 56px; 
+    height: 56px; 
+    border-radius: 50%;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.533), transparent 40%),
+        linear-gradient(135deg, rgb(106, 165, 255), rgb(126, 224, 182));
+    border: 3px solid color-mix(in oklab, var(--surface), transparent 30%);
+    box-shadow: var(--shadow); 
+    display: grid; 
+    place-items: center; 
+    font-weight: 800; 
+    color: rgb(14, 18, 34);
+}
+
+.balance .fig { 
+    display: flex; 
+    align-items: baseline; 
+    gap: 8px; 
+}
+
+.balance .amount { 
+    font-weight: 800; 
+    font-size: clamp(22px, 2.6vw, 34px); 
+    letter-spacing: .3px; 
+}
+
+.pill {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 6px;
+    font-size: 12px; 
+    font-weight: 700; 
+    padding: 6px 10px; 
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--success) 18%, transparent);
+    color: color-mix(in oklab, var(--success), var(--text) 40%);
+    border: 1px solid color-mix(in oklab, var(--success) 40%, var(--surface));
+}
+
+/* Text-based graph */
+.trend {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 6px; 
+    align-items: end; 
+    height: 64px;
+}
+
+.trend span {
+    display: block; 
+    height: var(--h, 20%); 
+    background: color-mix(in oklab, var(--primary) 60%, var(--surface) 40%);
+    border-radius: 6px; 
+    border: 1px solid color-mix(in oklab, var(--primary) 50%, var(--border));
+}
+
+/* Asset list */
+.assets { 
+    display: grid; 
+    gap: 10px; 
+}
+
+.asset { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 0; 
+    border-bottom: 1px dashed var(--border); 
+}
+
+.asset .sym { 
+    font-weight: 700; 
+}
+
+.asset .pct { 
+    font-variant-numeric: tabular-nums; 
+}
+
+/* ------------------------------
+Transaction table
+------------------------------ */
+.table-wrap { 
+    overflow-x: auto; 
+    border-radius: var(--radius); 
+    border: 1px solid var(--border); 
+    background: var(--surface); 
+    box-shadow: var(--shadow); 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: separate; 
+    border-spacing: 0; 
+    min-width: 620px; 
+}
+
+caption { 
+    text-align: left; 
+    padding: 16px; 
+    font-weight: 700; 
+    color: var(--muted); 
+}
+
+thead tr th { 
+    text-align: left; 
+    font-size: 16px; 
+    color: var(--muted); 
+    padding: 12px 16px; 
+    border-bottom: 1px solid var(--border); 
+    position: sticky; 
+    top: 0; 
+    background: var(--surface); 
+}
+
+tbody tr td { 
+    padding: 14px 16px; 
+    border-bottom: 1px solid var(--border); 
+}
+
+tbody tr:nth-child(even) { 
+    background: color-mix(in oklab, var(--surface), var(--bg) 12%); 
+}
+
+tbody tr:hover { 
+    background: color-mix(in oklab, var(--primary) 12%, var(--surface) 85%); 
+}
+
+.tag {
+    display: inline-block; 
+    font-size: 14px; 
+    padding: 4px 8px; 
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--primary) 16%, transparent);
+    border: 1px solid color-mix(in oklab, var(--primary) 40%, var(--surface));
+}
+
+/* ------------------------------
+Form to create transaction (no function)
+------------------------------ */
+form { 
+    display: grid; 
+    gap: 12px; 
+}
+
+.grid-2 { 
+    display: grid; 
+    gap: 12px; grid-template-columns: 1fr; 
+}
+
+@media (min-width: 720px) { 
+    .grid-2 { 
+        grid-template-columns: 1fr 1fr; 
+    } 
+}
+
+label { 
+    font-weight: 700; 
+    font-size: 15px; 
+}
+
+.field { 
+    display: grid; 
+    gap: 6px; 
+}
+
+input, select, textarea, button {
+    font: inherit; 
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 12px 14px; 
+    border-radius: var(--radius-sm);
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
