@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade-On Dashboard</title>
+    <meta name="description" content="Responsiv, tillgänglig dashboard för en decentraliserad applikation. Endast HTML & CSS, ingen interaktivitet.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <!-- Header / Nav with anchor links (Wallet & Transactions) -->
+    <header>
+        <div class="container nav" role="navigation" aria-label="Main-navigation">
+            <a class="brand" href="#top" aria-label="To the top">
+                <div class="logo" aria-hidden="true">T-O</div>
+                <span>Trade-On Dashboard</span>
+            </a>
+            <a href="#wallet">Wallet</a>
+            <a href="#transactions">Transactions</a>
+
+            <!-- Theme toggle. Checkbox determines :has()-rule -->
+            <input type="checkbox" id="theme-toggle" class="visually-hidden">
+            <label for="theme-toggle" class="theme-toggle" aria-label="Shift between light and dark theme" title="Shift theme (Light/Dark)">
+                <span class="moon" aria-hidden="true">🌙</span>
+                <span class="sun" aria-hidden="true">☀️</span>
+                <span class="small" style="color: var(--muted);">Theme</span> <!-- flytta till css -->
+            </label>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero container" aria-labelledby="intro-title">
+            <h1 id="intro-title">My Decentralize Overview</h1>
+            <p class="small">All contents are fictional and for education purposes only.</p>
+        </section>
+
+        <!-- WALLET -->
+        <section id="wallet" class="container" aria-labelledby="wallet-title">
+            <h2 id="wallet-title" class="visually-hidden">Wallet</h2>
+            <div class="cards">
+                <!-- Balance-card -->
+                <article class="card" aria-labelledby="balance-title">
+                    <h3 id="balance-title">Current Balance</h3>
+                    <div class="balance">
+                        <div class="token" aria-hidden="true">Ŧ</div>
+                        <div>
+                            <div class="fig">
+                                <div class="amount">12 345.6789 Ŧ</div>
+                                <span class="pill" aria-label="Today's change up 2,4%">▲ 2,4%</span>
+                            </div>
+                            <div class="small" style="color: var(--muted);">≈ 23 456,78 EUR</div> <!-- flytta till css -->
+                        </div>
+                    </div>
+                    <div class="trend" role="img" aria-label="Text-based price development in the last 12 months">
+                        <span style="--h:20%"></span>
+                        <span style="--h:24%"></span>
+                        <span style="--h:18%"></span>
+                        <span style="--h:36%"></span>
+                        <span style="--h:44%"></span>
+                        <span style="--h:38%"></span>
+                        <span style="--h:52%"></span>
+                        <span style="--h:60%"></span>
+                        <span style="--h:56%"></span>
+                        <span style="--h:68%"></span>
+                        <span style="--h:74%"></span>
+                        <span style="--h:70%"></span>
+                    </div>
+                </article>
+
+                <!-- Asset allocation -->
+                <article class="card" aria-labelledby="assets-title">
+                    <h3 id="assets-title">Assets</h3>
+                    <div class="assets" role="list">
+                        <div class="asset" role="listitem">
+                            <div><span class="sym">Ŧ</span> T-Coin</div>
+                            <div class="pct">8 912.34 (72%)</div>
+                        </div>
+                        <div class="asset" role="listitem">
+                            <div><span class="sym">Ξ</span> E-Thor</div>
+                            <div class="pct">2 000.00 (16%)</div>
+                        </div>
+                        <div class="asset" role="listitem">
+                            <div><span class="sym">₿</span> BitDumCoin</div>
+                            <div class="pct">450.00 (9%)</div>
+                        </div>
+                        <div class="asset" role="listitem">
+                            <div><span class="sym">ⓩ</span> Zeta</div>
+                            <div class="pct">120.00 (3%)</div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Status -->
+                <article class="card" aria-labelledby="status-title">
+                    <h3 id="status-title">Network Status</h3>
+                    <ul class="small" style="margin:0; padding-left: 18px;">  <!-- flytta till css -->
+                        <li>Chain: <strong>T-Chain Testnet</strong></li>
+                        <li>Latest block: <strong>#12 345 678</strong></li>
+                        <li>Gas fees: <strong>18 gwei</strong></li>
+                        <li>Nodes connected: <strong>42</strong></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+</body>
+</html>
