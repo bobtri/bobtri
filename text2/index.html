@@ -103,5 +103,163 @@
             </div>
         </section>
 
+        <!-- TRANSACTION HISTORY -->
+        <section id="transactions" class="container" aria-labelledby="tx-title">
+            <h2 id="tx-title" style="margin-bottom:12px">Transaktion History</h2>
+            <div class="table-wrap" role="region" aria-label="Tabell med senaste transaktioner">
+                <table>
+                    <caption>Latest 10 transactions (fictional)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">From</th>
+                            <th scope="col">To</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0x12ab…34cd</td>
+                            <td>0x98ff…aa01</td>
+                            <td>125.500 Ŧ</td>
+                            <td>2025‑11‑03 14:22</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0xbeef…cafe</td>
+                            <td>0xdead…babe</td>
+                            <td>2.000 Ξ</td>
+                            <td>2025‑11‑02 09:10</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0x1111…2222</td>
+                            <td>0x3333…4444</td>
+                            <td>0.045 ₿</td>
+                            <td>2025‑11‑01 20:45</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0xaaaa…bbbb</td>
+                            <td>0xcccc…dddd</td>
+                            <td>980 Ŧ</td>
+                            <td>2025‑10‑31 11:02</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0xabcd…ef01</td>
+                            <td>0xaaaa…0001</td>
+                            <td>50 Ŧ</td>
+                            <td>2025‑10‑30 08:15</td>
+                            <td><span class="tag">Declined</span></td>
+                        </tr>
+                        <tr>
+                            <td>0x9c9c…9c9c</td>
+                            <td>0x1a2b…3c4d</td>
+                            <td>3 200 Ŧ</td>
+                            <td>2025‑10‑29 18:33</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0xaaaa…eeee</td>
+                            <td>0xffff…0000</td>
+                            <td>12.34 Ŧ</td>
+                            <td>2025‑10‑28 07:50</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0x5afe…b00b</td>
+                            <td>0xface…feed</td>
+                            <td>420 Ŧ</td>
+                            <td>2025‑10‑27 16:19</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0x1234…5678</td>
+                            <td>0x8765…4321</td>
+                            <td>1.00 Ξ</td>
+                            <td>2025‑10‑26 12:00</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td>0xab12…cd34</td>
+                            <td>0xef56…ab78</td>
+                            <td>77 Ŧ</td>
+                            <td>2025‑10‑25 09:41</td>
+                            <td><span class="tag">Confirmed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CREATE TRANSACTION (Form – no functionality) -->
+        <section id="create" class="container" aria-labelledby="form-title">
+            <h2 id="form-title" style="margin-bottom:12px">Create transaction (demo)</h2>
+            <form action="#" method="post" aria-describedby="form-note">
+                <p id="form-note" class="small" style="color:var(--muted); margin: 0 0 6px;">The form is visual only. No data is sent or handled.</p>
+                
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="from">From-address</label>
+                        <input id="from" name="from" type="text" inputmode="text" placeholder="t.ex. 0x12ab…34cd" autocomplete="off">
+                    </div>
+                    <div class="field">
+                        <label for="to">To-adress</label>
+                        <input id="to" name="to" type="text" placeholder="t.ex. 0x98ff…aa01" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="amount">Amount</label>
+                        <input id="amount" name="amount" type="number" step="0.0001" min="0" placeholder="t.ex. 123.4567">
+                    </div>
+                    <div class="field">
+                        <label for="asset">Asset</label>
+                        <select id="asset" name="asset">
+                            <option>Ŧ – T-Coin</option>
+                            <option>Ξ – E-Thor</option>
+                            <option>₿ – BitDumCoin</option>
+                            <option>ⓩ – Zeta</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="note">Message (optional)</label>
+                    <textarea id="note" name="note" rows="4" placeholder="Short description, reference or memo…"></textarea>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="network">Network</label>
+                        <select id="network" name="network">
+                            <option selected>T-Chain Testnet</option>
+                            <option>AlphaNet</option>
+                            <option>Sandbox L2</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="fee">Gas fees (gwei)</label>
+                        <input id="fee" name="fee" type="number" step="0.1" min="0" placeholder="t.ex. 18">
+                    </div>
+                </div>
+
+                <div class="btns" role="group" aria-label="Formulärknappar (inaktiva)">
+                    <button type="submit" class="btn primary" aria-disabled="true">Send</button>
+                    <button type="reset" class="btn secondary" aria-disabled="true">Clear</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="small">© 2025 Trade-On Dashboard · Designed by Bobby Trinh</p>
+        </div>
+    </footer>
 </body>
 </html>
