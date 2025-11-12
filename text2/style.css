@@ -140,6 +140,78 @@ header {
 }
 
 /* ------------------------------
+Tema-knapp (endast CSS, desktop)
+------------------------------ */
+
+/* Göm själva checkboxen visuellt men behåll fokusbarhet */
+#theme-toggle.visually-hidden { 
+    position: absolute !important; 
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden; 
+    clip: rect(1px, 1px, 1px, 1px); 
+    white-space: nowrap; 
+}
+
+.theme-toggle {
+    display: none; /* desktop only */
+}
+
+@media (min-width: 500px) {
+    .theme-toggle {
+        display: inline-flex; 
+        align-items: center; 
+        gap: 8px;
+        padding: 8px 12px; 
+        border-radius: 10px; 
+        border: 1px solid var(--border);
+        background: color-mix(in oklab, var(--surface), transparent 10%);
+        font-weight: 700; 
+        cursor: pointer; 
+        user-select: none;
+      }
+
+    .theme-toggle:hover { 
+        box-shadow: 0 0 14px color-mix(in oklab, var(--primary), transparent 25%); 
+        transform: translateY(-2px); 
+    }
+
+    /* Stronger glow for primary button */
+    .btn.primary:hover {
+        box-shadow: 0 0 14px color-mix(in oklab, var(--primary), transparent 25%);
+    }
+
+    /* Fokusring när checkboxen får fokus */
+    #theme-toggle:focus-visible + .theme-toggle { 
+        outline: 3px solid var(--ring); 
+        outline-offset: 2px; 
+    }
+    
+    .theme-toggle .sun { 
+        display: none; 
+    }
+
+    /* När kryssrutan är ikryssad visar vi solen (ljust läge) */
+    html:has(#theme-toggle:checked) .theme-toggle .sun { 
+        display: inline; 
+    }
+      
+    html:has(#theme-toggle:checked) .theme-toggle .moon { 
+        display: none; 
+    }
+}
+
+/* Tillgänglighets-hjälpklass */
+.visually-hidden { 
+    position: absolute !important; 
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden; 
+    clip: rect(1px, 1px, 1px, 1px); 
+    white-space: nowrap; 
+}
+
+/* ------------------------------
 Intro
 ------------------------------ */
 .hero { 
@@ -376,4 +448,73 @@ input, select, textarea, button {
     padding: 12px 14px; 
     border-radius: var(--radius-sm);
     transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+input::placeholder, textarea::placeholder { 
+    color: color-mix(in oklab, var(--muted), var(--text) 20%); 
+}
+
+input:hover, select:hover, textarea:hover { 
+    border-color: color-mix(in oklab, var(--primary) 40%, var(--border)); 
+}
+
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 0; border-color: var(--ring);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--ring) 25%, transparent);
+}
+
+.btns { 
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+/* Button hover glow effect */
+.btn:hover {
+    box-shadow: 0 0 10px color-mix(in oklab, var(--primary), transparent 40%);
+    transform: translateY(-2px);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn.primary { 
+    background: var(--primary); 
+    color: var(--primary-contrast); 
+    border-color: color-mix(in oklab, var(--primary), black 10%);
+}
+
+.btn.secondary { 
+    background: color-mix(in oklab, var(--surface), var(--bg) 8%); 
+}
+
+.btn:focus-visible { 
+    outline: 3px solid var(--ring); outline-offset: 2px; 
+}
+
+/* Stronger glow for primary button */
+.btn.primary:hover {
+    box-shadow: 0 0 14px color-mix(in oklab, var(--primary), transparent 25%);
+}
+
+/* Subtle neutral glow for secondary button */
+.btn.secondary:hover {
+    box-shadow: 0 0 10px color-mix(in oklab, var(--muted), transparent 40%);
+}
+
+/* ------------------------------
+Footer
+------------------------------ */
+footer { 
+    color: var(--muted); 
+    padding: 34px 0 60px; 
+    text-align: center; 
+}
+
+.small { 
+    font-size: 16px; 
 }
